@@ -1,0 +1,42 @@
+﻿@{ Layout = null;}
+@Styles.Render("~/Content/css")
+<div class="container navbar-fixed-top">
+    
+    <div class="row">
+        <h2 style="line-height: 100px;" class="col-lg-offset-3"><b>Thông tin thành viên đã đăng ký</b></h2>
+        <div class="col-lg-3">
+            <img src="@ViewBag.Avatar" class="img-circle" width="200" height="200" />
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group row">
+                <div class="col-lg-3"><b>Mã nhân viên:</b></div>
+                <div class="col-lg-5">@ViewBag.EmpID</div>
+            </div>
+            <div class="form-group row">
+                <div class=" col-lg-3"><b>Họ tên:</b></div>
+                <div class="col-lg-5">@ViewBag.Name</div>
+            </div>
+            <div class="form-group row">
+                <div class=" col-lg-3"><b>Ngày sinh:</b></div>
+                <div class="col-lg-5">@ViewBag.BirthOfDate</div>
+            </div>
+            <div class="form-group row">
+                <div class=" col-lg-3"><b>Email:</b></div>
+                <div class="col-lg-5">@ViewBag.Email</div>
+            </div>
+            <div class="form-group row">
+                <div class=" col-lg-3"><b>Mật khẩu:</b></div>
+                <div class="col-lg-5">@ViewBag.Password</div>
+            </div>
+            <div class="form-group row">
+                <div class=" col-lg-3"><b>Phòng ban:</b></div>
+                <div class="col-lg-5">@ViewBag.Department</div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-5">
+                    @Html.ActionLink("Quay Lại", "/Index")
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>

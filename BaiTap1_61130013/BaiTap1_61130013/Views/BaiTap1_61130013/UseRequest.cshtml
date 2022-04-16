@@ -1,0 +1,31 @@
+﻿@{
+    Layout = null;
+}
+@Styles.Render("~/Content/css")
+<div class="container">
+    <h4>THỰC HIỆN PHÉP TOÁN CƠ BẢN</h4>
+    <form name="f1" action="/BaiTap1_61130013/UseRequest" method="post">
+        <div class="form-group">
+            <label>a</label>
+            <input type="text" name="a" /> <br />
+        </div>
+        <div class="form-group">
+            <label>b</label>
+            <input type="text" name="b" /> <br />
+        </div>
+        <div class="form-group">
+            <input type="radio" checked name="pt" value="+" />Cộng &nbsp;
+            <input type="radio" name="pt" value="-" />Trừ &nbsp;
+            <input type="radio" name="pt" value="*" />Nhân&nbsp;
+            <input type="radio" name="pt" value="/" />Chia&nbsp;
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Tính toán" class="btn btn-primary" />
+        </div>
+        <div class="form-group">
+            <label>Kết quả</label>
+            <input type="text" name="kq" value=@ViewBag.KQ />
+        </div>
+    </form>
+
+</div>

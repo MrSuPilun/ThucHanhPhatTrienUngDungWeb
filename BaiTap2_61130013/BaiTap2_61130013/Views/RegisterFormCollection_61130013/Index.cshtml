@@ -1,0 +1,24 @@
+﻿@{
+    Layout = null;
+}
+@Styles.Render("~/Content/css")
+<div class="container">
+    <h3><b>FormCollection</b></h3>
+    <form name="f1" action="/RegisterFormCollection_61130013/RegisterFormCollection" method="post">
+        <div class="form-group row">
+            <label class="col-lg-1">MSSV</label>
+            <input class="col-lg-3" type="text" name="Id" /> <br />
+        </div>
+        <div class="form-group row">
+            <label class="col-lg-1">Họ và tên</label>
+            <input class="col-lg-3" type="text" name="Name" /> <br />
+        </div>
+        <div class="form-group row">
+            <label class="col-lg-1">Điểm</label>
+            <input class="col-lg-3" type="text" name="Marks" /> <br />
+        </div>
+        <div class="form-group row">
+            <input type="submit" value="Đăng ký" class="btn btn-primary col-lg-offset-1" />
+        </div>
+    </form>
+</div>

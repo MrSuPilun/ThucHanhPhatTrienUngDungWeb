@@ -1,0 +1,32 @@
+﻿@{ Layout = null;}
+@Styles.Render("~/Content/css")
+<div class="container navbar-fixed-top">
+    <h2 style="line-height: 100px">CHỨC NĂNG GỬI EMAIL</h2>
+    <form name="f1" action="/BaiTap4_61130013/Index" method="post" enctype="multipart/form-data">
+        <div class="form-group row">
+            <label class="col-lg-2">Gửi từ email</label>
+            <input class="col-lg-3" type="email" name="From" />
+        </div>
+        <div class="form-group row">
+            <label class="col-lg-2">Mật khẩu</label>
+            <input class="col-lg-3" type="password" name="Password" />
+        </div>
+        <div class="form-group row">
+            <label class="col-lg-2">Gửi đến email</label>
+            <input class="col-lg-3" type="text" name="To" />
+        </div>
+        <div class="form-group row">
+            <label class="col-lg-2">Tiêu đề</label>
+            <input class="col-lg-3" type="text" name="Subject" />
+        </div>
+        <div class="form-group row">
+            <label class="col-lg-2">Nội dung</label>
+            <textarea class="col-lg-3" style="height: 200px" name="Body"></textarea>
+        </div>
+        <div class="form-group row">
+            <input type="submit" value="Gửi email" class="btn btn-primary col-lg-offset-2"/>
+        </div>
+    </form>
+</div>
+
+

@@ -1,0 +1,33 @@
+﻿@model BaiTap1.Models.CalModels
+@{
+    Layout = null;
+}
+@Styles.Render("~/Content/css")
+<div class="container">
+    @using (Html.BeginForm())
+    {
+        <div class="form-horizontal">
+            <h2>Máy Tính Đơn Giản</h2>
+            <div class="form-group">
+                <label>a</label>
+                @Html.EditorFor(model => model.a, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+            <div class="form-group">
+                <label>b</label>
+                @Html.EditorFor(model => model.b, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+            <div>
+                Cộng @Html.RadioButtonFor(model => model.pt, "+", new { @checked = "checked" }) &nbsp;
+                Trừ @Html.RadioButtonFor(model => model.pt, "-") &nbsp;
+                Nhân @Html.RadioButtonFor(model => model.pt, "*") &nbsp;
+                Chia @Html.RadioButtonFor(model => model.pt, "/") &nbsp;
+            </div>
+            <div><input class="btn btn-default" type="submit" value="Tính toán" /></div>
+            <div class="form-group">
+                <label>Kết quả</label>
+                <input class="form-control" type="text" name="kq" value=@ViewBag.KQ />
+            </div>
+        </div>
+    }
+
+</div>
